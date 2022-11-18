@@ -1,13 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>oxbar's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-		<h1>oxbbar</h1>
-		<p>To be created.</p>
-  </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+    <title>oxbbar - Portfolio</title>
+</head>
+
+<body class="preload">
+    <!---------- [START] ----- [TOP MENU FOR MOBILE] ---------->
+    <div class="topbar">
+        <ul class="topmenu">
+            <li class="topitem"><a href="#about">About Me</a></li>
+            <li class="topitem"><a href="#projects">Projects</a></li>
+            <li class="topitem"><a href="#education">Education</a></li>
+            <!--  <li class="item"><a href="#contact">Contact</a></li> -->
+            <li class="topsocial">
+                <a href="https://github.com/oxbbar" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a>
+            </li>
+            <li class="topsocial">
+                <a href="https://www.kaggle.com/oxbbar" target="_blank"><i class="fa-brands fa-kaggle fa-lg"></i></a>
+            </li>
+        </ul>
+    </div>
+    <!---------- [END] ----- [TOP MENU FOR MOBILE] ---------->
+
+    <div class="wrapper">
+        <!---------- [START} ----- [SIDE MENU FOR DESKTOP] ---------->
+
+        <div class="sidebar">
+            <div class="picture">
+                <!--    TBD  <img src="images/bg.jpg"> -->
+            </div>
+            <ul>
+                <li class="logo"><a href="#">oxbbar</a></li>
+                <li class="item"><a href="#about">About Me</a></li>
+                <li class="item"><a href="#projects">Projects</a></li>
+                <li class="item"><a href="#education">Education</a></li>
+                <!--  <li class="item"><a href="#contact">Contact</a></li> -->
+            </ul>
+            <div class="socials">
+                <a href="https://github.com/oxbbar" target="_blank"><i
+                        class="fa-brands fa-github fa-lg"></i></a>&nbsp;&nbsp;
+                <a href="https://www.kaggle.com/oxbbar" target="_blank"><i class="fa-brands fa-kaggle fa-lg"></i></a>
+            </div>
+        </div>
+        <!---------- [END} ----- [SIDE MENU FOR DESKTOP] ---------->
+
+        <!---------- [START} ----- [CONTENTS} ---------->
+        <div class="contents">
+            <div class="about-me" id="about">
+                <div class="section-header">
+                    <p>About Me</p>
+                </div>
+                <div class="section-desc">
+                    <p>
+                        I'm an educational professional expanding my skills in data
+                        analytics - <b>python</b>, <b>SQL</b> and <b>dashboards</b>.
+                    </p>
+
+                    <p>
+                        I'm passionate about <b>analysing data</b>,
+                        <b>finding trends</b> and <b>providing insight</b>.
+                    </p>
+
+                    <p>I love film, travel, cooking and tennis.</p>
+
+                    <p>
+                        You can find me on
+                        <b><a href="https://github.com/oxbbar/" target="_blank">GitHub</a></b>
+                        and
+                        <b><a href="https://www.kaggle.com/oxbbar" target="_blank">Kaggle</a></b>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projects" id="projects">
+                <div class="section-header">
+                    <p>Projects</p>
+                </div>
+<!--                 <div class="section-desc">
+                    <p>Case studies, competitions, personal projects.</p>
+                </div> -->
+                <ul class="projects-container">
+                    <!---------- [CASE STUDIES] ---------->
+                    <li class="casestudies-category">
+                        <div class="title" tabindex="0">Case Studies</div>
+                    </li>
+                    <li class="casestudies">
+                        <ul>
+
+                            <!----- [START OF PROJECT CARD] ----->
+                            <li class="project-card">
+                                <div class="project-card-top">
+                                    <div class="project-card-title">
+                                        <p>Bellabeat Capstone Project</p>
+                                    </div>
+                                    <div class="project-card-links">
+                                        <a href="https://github.com/oxbbar/course-google-data-analytics/tree/main/course_8_bellabeat"
+                                            target="_blank">
+                                            <i class="fa-brands fa-github fa-lg"></i>
+                                        </a><!-- &nbsp;&nbsp;
+                                        <a href="" target="_blank">
+                                            <i class="fa-brands fa-kaggle fa-lg"></i>
+                                        </a> -->
+                                    </div>
+                                </div>
+                                <div class="project-card-mid">
+
+                                    <div class="project-card-image">
+                                        <a href="images/project-bellabeat.jpg" target="_blank">
+                                            <img src="images/project-bellabeat.jpg" />
+                                        </a>
+                                    </div>
+
+                                    <div class="project-card-desc">
+                                        <p>
+                                            Processed and analysed Fitbit smart device health and
+                                            fitness data to find daily, hourly and per-minute
+                                            trends. Provided insight on trends to inform the
+                                            marketing strategies for Bellabeat products to unlock
+                                            new market growth opportunities for stakeholders.
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <ul class="project-card-skills">
+                                    <li>R</li>
+                                    <li>RStudio</li>
+                                    <li>Data Cleaning</li>
+                                    <li>Data Processing</li>
+                                    <li>Data Analysis</li>
+                                    <li>Data Visualisation</li>
+                                    <li>Presenting</li>
+                                    <li>Reporting</li>
+                                    <li>Tableau</li>
+                                </ul>
+
+
+                            </li>
+                            <!----- [END OF PROJECT CARD] ----->
+
+                        </ul>
+                    </li>
+
+                    <!--
+                    <!---------- [COMPETITIONS] --------
+                    <li class="competitions-category">
+                        <div class="title" tabindex="0">Competitions</div>
+                    </li>
+                    <li class="competitions">
+                        <ul>
+
+                            <!----- [PROJECT CARD - TITANIC - MACHINE LEARNING FROM DISASTER] ---
+                            <li class="project-card">
+                                <div class="project-card-title">
+                                    <p>Titanic - Machine Learning from Disaster</p>
+                                </div>
+                                <div class="project-card-contents">
+                                    <div class="project-card-left">
+                                        <div class="project-card-image"><img src="images/course-data-analyst.jpg"></div>
+                                        <div class="project-card-links">
+                                            <a href="" target="_blank">
+                                                <i class="fa-brands fa-github fa-lg"></i>
+                                            </a>&nbsp;&nbsp;
+                                            <a href="" target="_blank">
+                                                <i class="fa-brands fa-kaggle fa-lg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="project-card-right">
+                                        <div class="project-card-desc">
+                                            <p>Used machine learning to create a model that predicts which passengers
+                                                survived the Titanic shipwreck.</p>
+                                        </div>
+                                        <ul class="project-card-skills">
+                                            <li>TBD</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <!----- [END OF PROJECT CARD] ---
+
+                        </ul>
+                    </li>
+                -->
+
+                    <!---------- [PERSONAL] ---------->
+                    <li class="personal-category">
+                        <div class="title" tabindex="0">Personal</div>
+                    </li>
+                    <li class="personal">
+                        <ul>
+
+
+                            <!----- [PROJECT CARD - SHOPPING LIST GENERATOR] ----->
+                            <li class="project-card">
+                                <div class="project-card-top">
+                                    <div class="project-card-title">
+                                        <p>Shopping List Generator</p>
+                                    </div>
+                                    <div class="project-card-links">
+                                        <a href="https://github.com/oxbbar/excel-shopping-list-generator"
+                                            target="_blank">
+                                            <i class="fa-brands fa-github fa-lg"></i>
+                                        </a><!-- &nbsp;&nbsp;
+                                        <a href="" target="_blank">
+                                            <i class="fa-brands fa-kaggle fa-lg"></i>
+                                        </a> -->
+                                    </div>
+                                </div>
+                                <div class="project-card-mid">
+
+                                    <div class="project-card-image">
+                                        <a href="images/project-grocery-list.jpg" target="_blank">
+                                            <img src="images/project-grocery-list.jpg">
+                                        </a>
+                                    </div>
+
+                                    <div class="project-card-desc">
+                                        <p>
+                                            A spreadsheet to choose pre-defined meals for the week
+                                            and generate your shopping list. Great for reducing
+                                            your trips to the supermarket, reducing your cost for
+                                            groceries and eating healthier!
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <ul class="project-card-skills">
+                                    <li>Excel</li>
+                                    <li>Google Sheets</li>
+                                </ul>
+
+
+                            </li>
+                            <!----- [END OF PROJECT CARD] ----->
+
+                            <!----- [PROJECT CARD - SIMPLE ONE YEAR BUDGET] ----->
+                            <li class="project-card">
+                                <div class="project-card-top">
+                                    <div class="project-card-title">
+                                        <p>Simple One Year Budget</p>
+                                    </div>
+                                    <div class="project-card-links">
+                                        <a href="https://github.com/oxbbar/excel-first-basic-budget" target="_blank">
+                                            <i class="fa-brands fa-github fa-lg"></i>
+                                        </a><!--  &nbsp;&nbsp;
+                                        <a href="" target="_blank">
+                                            <i class="fa-brands fa-kaggle fa-lg"></i>
+                                        </a> -->
+                                    </div>
+                                </div>
+                                <div class="project-card-mid">
+
+                                    <div class="project-card-image">
+                                        <a href="images/project-yearly-budget.jpg" target="_blank">
+                                            <img src="images/project-yearly-budget.jpg">
+                                        </a>
+                                    </div>
+
+                                    <div class="project-card-desc">
+                                        <p>
+                                            A simple budget sheet for those wanting to track and
+                                            plan their spending for one year. Choose custom
+                                            categories within five pre-defined groups, determine
+                                            monthly budget and input transactions. The spreadsheet
+                                            does the rest! Suitable for those starting with
+                                            budgets.
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <ul class="project-card-skills">
+                                    <li>Excel</li>
+                                    <li>Data Visualisation</li>
+                                </ul>
+
+
+                            </li>
+                            <!----- [END OF PROJECT CARD] ----->
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="education" id="education">
+                <div class="section-header">
+                    <p>Education</p>
+                </div>
+                <!--  <div class="section-desc">
+                    <p></p>
+                </div> -->
+                <ul class="education-courses">
+                    <!----- [START OF EDUCATION CARD] ----->
+                    <li class="education-card">
+                        <div class="education-card-title">
+                            <p>
+                                Graduate Certificate in Data Analytics --- University of
+                                Newcastle
+                            </p>
+                        </div>
+                        <div class="education-card-desc">
+                            <p>
+                                Total Quality Management. Systems thinking. Statistical process control, surveys and
+                                experimental design.
+                                Regression and ANOVA. Data modelling and visualisation. Data reporting. Data security,
+                                privacy and ethics. Excel and JMP.
+                            </p>
+                        </div>
+                        <ul class="education-card-skills">
+                            <li>TQM</li>
+                            <li>Systems Thinking</li>
+                            <li>SPC</li>
+                            <li>Experimental Design</li>
+                            <li>Data Collection</li>
+                            <li>Data Modelling</li>
+                            <li>Data Visualisation</li>
+                            <li>Presenting</li>
+                            <li>Reporting</li>
+                            <li>Data Ethics</li>
+                            <li>Excel</li>
+                            <li>JMP</li>
+
+                    </li>
+                </ul>
+                </li>
+                <!----- [END OF EDUCATION CARD] ----->
+
+                <!----- [START OF EDUCATION CARD] ----->
+                <li class="education-card">
+                    <div class="education-card-title">
+                        <p>Data Analyst in Python - Career Path --- Dataquest</p>
+                    </div>
+                    <div class="education-card-desc">
+                        <p>
+                            Python fundamentals. Preparing and extracting data with SQL
+                            queries. Data visualisation. Descriptive and predictive
+                            statistics.
+                        </p>
+                    </div>
+                    <ul class="education-card-skills">
+                        <li>Python</li>
+                        <li>Jupyter Notebook</li>
+                        <li>pandas</li>
+                        <li>NumPy</li>
+                        <li>Data Cleaning</li>
+                        <li>Data Analysis</li>
+                        <li>Data Visualisation</li>
+                        <li>SQL</li>
+                        <li>APIs and Web Scraping</li>
+                        <li>Statistics</li>
+                        <li>Conditional Probability</li>
+                        <li>Git</li>
+                    </ul>
+                </li>
+                <!----- [END OF EDUCATION CARD] ----->
+
+                <!----- [START] ----- [Google Data Analytics - Professional Certificate] ----->
+                <li class="education-card">
+                    <div class="education-card-title">
+                        <p>
+                            Google Data Analytics - Professional Certificate --- Coursera
+                        </p>
+                    </div>
+                    <div class="education-card-desc">
+                        <p>
+                            Collecting, cleaning, processing and analysing data. SQL queries. R programming. Creating
+                            data visualisations in Tableau. Presenting and reporting insight.
+                        </p>
+                    </div>
+                    <ul class="education-card-skills">
+                        <li>Data Collection</li>
+                        <li>Data Cleaning</li>
+                        <li>Data Analysis</li>
+                        <li>Data Visualisation</li>
+                        <li>SQL</li>
+                        <li>R</li>
+                        <li>Tableau</li>
+                        <li>Sampling</li>
+                        <li>Excel</li>
+                        <li>Google Sheets</li>
+                    </ul>
+                </li>
+                <!----- [ END ] ----- [Google Data Analytics - Professional Certificate] ----->
+
+                <!----- [START] ----- [Graduate Diploma of Education] ----->
+                <li class="education-card">
+                    <div class="education-card-title">
+                        <p>Graduate Diploma of Education --- Macquarie University</p>
+                    </div>
+                    <div class="education-card-desc">
+                        <p>
+                            Presentations and reporting. Curriculum design. Inclusive
+                            education. Management and collaboration
+                        </p>
+                    </div>
+                    <ul class="education-card-skills">
+                        <li>Presenting</li>
+                        <li>Reporting</li>
+                        <li>Curriculum Design</li>
+                    </ul>
+                </li>
+                <!----- [ END ] ----- [Graduate Diploma of Education] ----->
+
+                <!----- [START] ----- [Bachelor of Science] ----->
+                <li class="education-card">
+                    <div class="education-card-title">
+                        <p>Bachelor of Science --- Macquarie University</p>
+                    </div>
+                    <div class="education-card-desc">
+                        <p>
+                            Data collection and quality. Statistical models, regression &
+                            correlation. Sampling, hypothesis testing and errors. Excel
+                            and Minitab. Presentation and reporting.
+                        </p>
+                    </div>
+                    <ul class="education-card-skills">
+                        <li>Excel</li>
+                        <li>Statistics</li>
+                        <li>Regression</li>
+                        <li>Correlation</li>
+                        <li>Anova</li>
+                        <li>Minitab</li>
+                    </ul>
+                </li>
+                <!----- [ END ] ----- [Bachelor of Science] ----->
+                </ul>
+            </div>
+
+            <!-- <div class="contact" id="contact">
+                <div class="section-header">
+                    <p>Contact</p>
+                </div>
+                <div class="section-desc">
+                    <p></p>
+                </div>
+            </div> -->
+        </div>
+        <!---------- [END} ----- [CONTENTS} ---------->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
