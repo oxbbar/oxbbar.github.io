@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
 const casestudies = document.querySelector('.casestudies-category');
 /* const competitions = document.querySelector('.competitions-category'); */
 const personal = document.querySelector('.personal-category');
+const small = document.querySelector('.small-category');
 
 function toggleCaseStudies() {
     if (this.parentElement.querySelector('.casestudies').classList.contains("submenu-active")) {
@@ -43,6 +44,18 @@ function togglePersonal() {
     }
 }
 
+function toggleSmall() {
+    if (this.parentElement.querySelector('.small').classList.contains("submenu-active")) {
+        this.parentElement.querySelector('.small').classList.remove("submenu-active");
+        this.querySelector('.title').classList.remove('chevron');
+    }
+    else {
+        this.parentElement.querySelector('.small').classList.add("submenu-active");
+        this.querySelector('.title').classList.add('chevron');
+    }
+}
+
 casestudies.addEventListener('click',toggleCaseStudies,false)
 /* competitions.addEventListener('click',toggleCompetitions,false) */
 personal.addEventListener('click',togglePersonal,false)
+small.addEventListener('click',toggleSmall,false)

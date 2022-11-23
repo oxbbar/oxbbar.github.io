@@ -230,7 +230,6 @@ body {
   min-height: 40px;
 }
 
-
 .project-card-links {
   display: block;
   justify-content: center;
@@ -245,6 +244,45 @@ body {
 }
 
 .project-card-links a:hover {
+  color: white;
+}
+
+.small-project-card-top {
+  margin: 5px 5px 5px 5px;
+  display: block;
+}
+
+.small-project-card-title {
+  display: flex;
+  width: auto;
+  padding: 5px 5px 5px 5px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  min-height: 20px;
+}
+
+.small-project-card-title p {
+  color: black;
+  /*   text-transform: uppercase; */
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.small-project-card-links {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  min-height: 20px;
+}
+
+.small-project-card-links a {
+  font-family: "Font Awesome 6 Free";
+  font-size: 16px;
+}
+
+.small-project-card-links a:hover {
   color: white;
 }
 
@@ -287,7 +325,7 @@ body {
 .education-card-title p,
 .project-card-title p {
   color: black;
-/*   text-transform: uppercase; */
+  /*   text-transform: uppercase; */
   font-weight: 900;
   font-size: 18px;
 }
@@ -301,7 +339,7 @@ body {
 .education-card-desc p {
   font-size: 14px;
   font-weight: 600;
-  color: #555555;
+  color: black;
 }
 
 .education-card-skills {
@@ -345,7 +383,8 @@ body {
 
 .casestudies-category,
 .competitions-category,
-.personal-category {
+.personal-category,
+.small-category {
   padding: 5px;
   cursor: pointer;
   margin: 0 10px 10px 10px;
@@ -385,7 +424,8 @@ body {
 
 .casestudies,
 .competitions,
-.personal {
+.personal,
+.small {
   margin: 10px 15px;
   justify-content: space-between;
   display: none;
@@ -393,21 +433,22 @@ body {
 
 .casestudies.submenu-active,
 .competitions.submenu-active,
-.personal.submenu-active {
+.personal.submenu-active,
+.small.submenu-active {
   display: block;
 }
 
 .project-card {
-  background-color: #81e2f7;
+  background-color: #b3e4f0;
   display: block;
   padding: 5px;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin: 0 10px 25px 10px;
 }
 
 .project-card:hover {
   box-shadow: 0 0 10px black;
-  background-color: #81ccf7;
+  background-color: #75c4f1;
 }
 
 /* Wide */
@@ -445,14 +486,18 @@ body {
 
   .project-card-title {
     justify-content: left;
+    text-align: left;
   }
 
-  
-.project-card-title {
+  .small-project-card-top {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-  text-align: left;
-
-}
+  .small-project-card-title {
+    justify-content: left;
+    text-align: left;
+  }
 
   .project-card-mid {
     display: flex;
