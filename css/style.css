@@ -220,18 +220,6 @@ body {
   align-items: center;
 }
 
-.education-card-links {
-  display: block;
-  justify-content: center;
-  text-align: center;
-  margin: 5px;
-}
-
-.education-card-links a {
-  font-family: "Font Awesome 6 Free";
-  font-size: 16px;
-}
-
 .project-card-top {
   margin: 5px 5px 0 5px;
   display: block;
@@ -245,23 +233,6 @@ body {
   text-align: center;
   align-items: center;
   min-height: 40px;
-}
-
-.project-card-links {
-  display: block;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  min-height: 40px;
-}
-
-.project-card-links a {
-  font-family: "Font Awesome 6 Free";
-  font-size: 16px;
-}
-
-.project-card-links a:hover {
-  color: white;
 }
 
 .small-project-card-top {
@@ -284,23 +255,6 @@ body {
   /*   text-transform: uppercase; */
   font-weight: 600;
   font-size: 16px;
-}
-
-.small-project-card-links {
-  display: block;
-  justify-content: center;
-  text-align: center;
-  padding: 5px;
-  min-height: 20px;
-}
-
-.small-project-card-links a {
-  font-family: "Font Awesome 6 Free";
-  font-size: 16px;
-}
-
-.small-project-card-links a:hover {
-  color: white;
 }
 
 .project-card-mid {
@@ -472,7 +426,8 @@ body {
   margin: 0 10px 25px 10px;
 }
 
-.project-card:hover {
+.project-card:hover,
+.education-card.link:hover {
   box-shadow: 0 0 10px black;
   background-color: #75c4f1;
 }
