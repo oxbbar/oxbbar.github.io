@@ -205,6 +205,11 @@ body {
   margin: 10px;
 }
 
+.education-card-top {
+  margin: 5px 5px 0 5px;
+  display: block;
+}
+
 .education-card-title {
   display: flex;
   width: auto;
@@ -213,6 +218,18 @@ body {
   min-height: 1.5em;
   justify-content: left;
   align-items: center;
+}
+
+.education-card-links {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+}
+
+.education-card-links a {
+  font-family: "Font Awesome 6 Free";
+  font-size: 16px;
 }
 
 .project-card-top {
@@ -240,7 +257,7 @@ body {
 
 .project-card-links a {
   font-family: "Font Awesome 6 Free";
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .project-card-links a:hover {
@@ -322,6 +339,14 @@ body {
   align-items: center;
 }
 
+.small-project-card-skills {
+  min-height: 25px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 .education-card-title p,
 .project-card-title p {
   color: black;
@@ -352,7 +377,8 @@ body {
 }
 
 .education-card-skills li,
-.project-card-skills li {
+.project-card-skills li,
+.small-project-card-skills li {
   display: block;
   font-size: 12px;
   font-weight: 600;
@@ -484,7 +510,17 @@ body {
     flex-wrap: wrap;
   }
 
+  .education-card-top {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .project-card-title {
+    justify-content: left;
+    text-align: left;
+  }
+
+  .education-card-title {
     justify-content: left;
     text-align: left;
   }
