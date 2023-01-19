@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
 const casestudies = document.querySelector('.casestudies-category');
 /* const competitions = document.querySelector('.competitions-category'); */
 const personal = document.querySelector('.personal-category');
+const dashboard = document.querySelector('.dashboard-category');
 const small = document.querySelector('.small-category');
 
 function toggleCaseStudies() {
@@ -29,6 +30,17 @@ function toggleCompetitions() {
     }
     else {
         this.parentElement.querySelector('.competitions').classList.add("submenu-active");
+        this.querySelector('.title').classList.add('chevron');
+    }
+}
+
+function toggleDashboard() {
+    if (this.parentElement.querySelector('.dashboard').classList.contains("submenu-active")) {
+        this.parentElement.querySelector('.dashboard').classList.remove("submenu-active");
+        this.querySelector('.title').classList.remove('chevron');
+    }
+    else {
+        this.parentElement.querySelector('.dashboard').classList.add("submenu-active");
         this.querySelector('.title').classList.add('chevron');
     }
 }
@@ -57,5 +69,6 @@ function toggleSmall() {
 
 casestudies.addEventListener('click',toggleCaseStudies,false)
 /* competitions.addEventListener('click',toggleCompetitions,false) */
+dashboard.addEventListener('click',toggleDashboard,false)
 personal.addEventListener('click',togglePersonal,false)
 small.addEventListener('click',toggleSmall,false)

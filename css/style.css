@@ -364,6 +364,7 @@ body {
 .casestudies-category,
 .competitions-category,
 .personal-category,
+.dashboard-category,
 .small-category {
   padding: 5px;
   cursor: pointer;
@@ -405,6 +406,7 @@ body {
 .casestudies,
 .competitions,
 .personal,
+.dashboard,
 .small {
   margin: 10px 15px;
   justify-content: space-between;
@@ -414,6 +416,7 @@ body {
 .casestudies.submenu-active,
 .competitions.submenu-active,
 .personal.submenu-active,
+.dashboard.submenu-active,
 .small.submenu-active {
   display: block;
 }
