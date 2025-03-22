@@ -1,74 +1,77 @@
-window.addEventListener("load", () => {
-    document.body.classList.remove("preload");
-})
-
-
-// Opening individual project category submenus -- this is definintely not the easiest way.
-
-const casestudies = document.querySelector('.casestudies-category');
-/* const competitions = document.querySelector('.competitions-category'); */
-const personal = document.querySelector('.personal-category');
-const dashboard = document.querySelector('.dashboard-category');
-const small = document.querySelector('.small-category');
-
-function toggleCaseStudies() {
-    if (this.parentElement.querySelector('.casestudies').classList.contains("submenu-active")) {
-        this.parentElement.querySelector('.casestudies').classList.remove("submenu-active");
-        this.querySelector('.title').classList.remove('chevron');
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Portfolio Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            
+            // Add active class to clicked button
+            btn.classList.add('active');
+            
+            const filter = btn.getAttribute('data-filter');
+            
+            portfolioItems.forEach(item => {
+                const categories = item.getAttribute('data-category').split(',');
+                
+                if (filter === 'all' || categories.includes(filter)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const target = document.querySelector(this.getAttribute('href'));
+            
+            if (target) {
+                // Get the height of the top nav if it's visible
+                const topNavHeight = document.querySelector('.top-nav').offsetHeight || 0;
+                
+                window.scrollTo({
+                    top: target.offsetTop - topNavHeight,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Add active class to nav links based on scroll position
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a, .top-nav-links a');
+    
+    function highlightNavLink() {
+        const scrollPosition = window.scrollY;
+        const topNavHeight = document.querySelector('.top-nav').offsetHeight || 0;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - topNavHeight - 100;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
     }
-    else {
-        this.parentElement.querySelector('.casestudies').classList.add("submenu-active");
-        this.querySelector('.title').classList.add('chevron');
-    }
-}
-
-function toggleCompetitions() {
-    if (this.parentElement.querySelector('.competitions').classList.contains("submenu-active")) {
-        this.parentElement.querySelector('.competitions').classList.remove("submenu-active");
-        this.querySelector('.title').classList.remove('chevron');
-
-    }
-    else {
-        this.parentElement.querySelector('.competitions').classList.add("submenu-active");
-        this.querySelector('.title').classList.add('chevron');
-    }
-}
-
-function toggleDashboard() {
-    if (this.parentElement.querySelector('.dashboard').classList.contains("submenu-active")) {
-        this.parentElement.querySelector('.dashboard').classList.remove("submenu-active");
-        this.querySelector('.title').classList.remove('chevron');
-    }
-    else {
-        this.parentElement.querySelector('.dashboard').classList.add("submenu-active");
-        this.querySelector('.title').classList.add('chevron');
-    }
-}
-
-function togglePersonal() {
-    if (this.parentElement.querySelector('.personal').classList.contains("submenu-active")) {
-        this.parentElement.querySelector('.personal').classList.remove("submenu-active");
-        this.querySelector('.title').classList.remove('chevron');
-    }
-    else {
-        this.parentElement.querySelector('.personal').classList.add("submenu-active");
-        this.querySelector('.title').classList.add('chevron');
-    }
-}
-
-function toggleSmall() {
-    if (this.parentElement.querySelector('.small').classList.contains("submenu-active")) {
-        this.parentElement.querySelector('.small').classList.remove("submenu-active");
-        this.querySelector('.title').classList.remove('chevron');
-    }
-    else {
-        this.parentElement.querySelector('.small').classList.add("submenu-active");
-        this.querySelector('.title').classList.add('chevron');
-    }
-}
-
-casestudies.addEventListener('click',toggleCaseStudies,false)
-/* competitions.addEventListener('click',toggleCompetitions,false) */
-dashboard.addEventListener('click',toggleDashboard,false)
-personal.addEventListener('click',togglePersonal,false)
-small.addEventListener('click',toggleSmall,false)
+    
+    // Initial call to highlight the appropriate nav link
+    highlightNavLink();
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', highlightNavLink);
+});

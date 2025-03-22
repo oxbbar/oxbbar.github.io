@@ -4,772 +4,639 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <title>oxbbar - Portfolio</title>
+    <title>oxbbar // Portfolio</title>
 </head>
 
-<body class="preload">
-    <!---------- [START] ----- [TOP MENU FOR MOBILE] ---------->
-    <div class="topbar">
-        <ul class="topmenu">
-            <li class="topitem"><a href="#about">About Me</a></li>
-            <li class="topitem"><a href="#projects">Projects</a></li>
-            <li class="topitem"><a href="#education">Education</a></li>
-            <!--  <li class="item"><a href="#contact">Contact</a></li> -->
-            <li class="topsocial">
-                <a href="https://github.com/oxbbar" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a>
-            </li>
-            <li class="topsocial">
-                <a href="https://www.kaggle.com/oxbbar" target="_blank"><i class="fa-brands fa-kaggle fa-lg"></i></a>
-            </li>
-        </ul>
-    </div>
-    <!---------- [END] ----- [TOP MENU FOR MOBILE] ---------->
+<body>
+    <div class="page-wrapper">
 
-    <div class="wrapper">
-        <!---------- [START} ----- [SIDE MENU FOR DESKTOP] ---------->
+        <!-- [TOP BAR FOR NARROW SCREENS]-->
+        <div class="top-nav" id="topNav">
+            <div class="nav-container">
+                <div class="logo">Oxbbar</div>
 
-        <div class="sidebar">
-            <div class="picture">
-                <!--    TBD  <img src="images/bg.jpg"> -->
-            </div>
-            <ul>
-                <li class="logo"><a href="#">oxbbar</a></li>
-                <li class="item"><a href="#about">About Me</a></li>
-                <li class="item"><a href="#projects">Projects</a></li>
-                <li class="item"><a href="#education">Education</a></li>
-                <!--  <li class="item"><a href="#contact">Contact</a></li> -->
-            </ul>
-            <div class="socials">
-                <a href="https://github.com/oxbbar" target="_blank"><i
-                        class="fa-brands fa-github fa-lg"></i></a>&nbsp;&nbsp;
-                <a href="https://www.kaggle.com/oxbbar" target="_blank"><i class="fa-brands fa-kaggle fa-lg"></i></a>
+                <!-- [NAVIGATION LINKS FOR NARROW SCREEN]-->
+                <nav class="top-nav-links">
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- [SOCIAL LINKS FOR NARROW SCREEN]-->
+                <div class="top-nav-social">
+                    <a href="https://github.com/oxbbar" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+
             </div>
         </div>
-        <!---------- [END} ----- [SIDE MENU FOR DESKTOP] ---------->
+        
+        <!-- [CONTAINER FOR EVERYTHING ELSE]-->
+        <div class="container">
 
-        <!---------- [START} ----- [CONTENTS} ---------->
-        <div class="contents">
+            <!-- [SIDEBAR FOR WIDE SCREEN]-->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-content">
 
-            <div class="about-me" id="about">
-                <div class="section-header">
-                    <p>About Me</p>
-                </div>
-                <div class="section-desc">
-                    <p>
-                        I'm an educational professional expanding my skills in data
-                        analytics - <b>python</b>, <b>SQL</b> and <b>dashboards</b>.
-                    </p>
-
-                    <p>
-                        I'm passionate about <b>analysing data</b>,
-                        <b>finding trends</b> and <b>providing insight</b>.
-                    </p>
-
-                    <p>I love film, travel, cooking and tennis.</p>
-
-                    <p>
-                        You can find me on
-                        <b><a href="https://github.com/oxbbar/" target="_blank">GitHub</a></b>
-                        and
-                        <b><a href="https://www.kaggle.com/oxbbar" target="_blank">Kaggle</a></b>.
-                    </p>
-                </div>
-            </div>
-
-            <div class="projects" id="projects">
-                <div class="section-header">
-                    <p>Projects</p>
-                </div>
-                <div class="section-desc">
-                    <p>
-                        Clicking on a project will open a new window and take you to its GitHub page. You can also find them in my 
-                        <b><a href="https://github.com/oxbbar/course-projects/" target="_blank">Course Projects</a></b>
-                        repository on GitHub.
-                    </p>
-                </div>
-                <ul class="projects-container">
-                    <!---------- [CASE STUDIES] ---------->
-                    <li class="casestudies-category">
-                        <div class="title" tabindex="0">Case Studies</div>
-                    </li>
-                    <li class="casestudies">
+                    <div class="profile">
+                        <!-- TBD
+                        <img src="" alt="Profile Photo">
+                        -->
+                        <h1>Oxbbar</h1>
+                        <p>Data Scientist | ML Engineer</p>
+                    </div>
+                    
+                    <!-- [NAVIGATION LINKS FOR WIDE SCREEN]-->
+                    <nav class="nav-links">
                         <ul>
-
-                            <!----- [START OF PROJECT CARD] ----->
-                            <li class="project-card"
-                                onClick="window.open('https://github.com/oxbbar/course-projects/tree/main/google-data-analytics-bellabeat-case-study/', '_blank').focus();"
-                                style="cursor: pointer" ;>
-
-                                <div class="project-card-top">
-                                    <div class="project-card-title">
-                                        <p>Bellabeat Capstone Project</p>
-                                    </div>
-                                </div>
-
-                                <div class="project-card-mid">
-
-                                    <div class="project-card-image">
-                                        <a href="images/project-bellabeat.jpg" target="_blank">
-                                            <img src="images/project-bellabeat.jpg" />
-                                        </a>
-                                    </div>
-
-                                    <div class="project-card-desc">
-                                        <p>
-                                            Processed and analysed Fitbit smart device health and
-                                            fitness data to find daily, hourly and per-minute
-                                            trends. Provided insight on trends to inform the
-                                            marketing strategies for Bellabeat products to unlock
-                                            new market growth opportunities for stakeholders.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-                                <ul class="project-card-skills">
-                                    <li>R</li>
-                                    <li>RStudio</li>
-                                    <li>Data Cleaning</li>
-                                    <li>Data Processing</li>
-                                    <li>Data Analysis</li>
-                                    <li>Data Visualisation</li>
-                                    <li>Presenting</li>
-                                    <li>Reporting</li>
-                                    <li>Tableau</li>
-                                </ul>
-
-                            </li>
-                            <!----- [END OF PROJECT CARD] ----->
-
+                            <li><a href="#about">About Me</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
-                    </li>
+                    </nav>
+                    
+                    <!-- [SOCIAL LINKS FOR WIDE SCREEN]-->
+                    <div class="social-links">
+                        
+                        <!-- [GITHUB] -->
+                        <a href="https://github.com/oxbbar" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
 
-                    <!--
-                    <!---------- [COMPETITIONS] --------
-                    <li class="competitions-category">
-                        <div class="title" tabindex="0">Competitions</div>
-                    </li>
-                    <li class="competitions">
-                        <ul>
+                        <!-- [KAGGLE] -->
+                        <a href="https://kaggle.com/oxbbar" target="_blank">
+                            <i class="fab fa-kaggle"></i>
+                        </a>
 
-                            <!----- [PROJECT CARD - TITANIC - MACHINE LEARNING FROM DISASTER] ---
-                            <li class="project-card">
-                                <div class="project-card-title">
-                                    <p>Titanic - Machine Learning from Disaster</p>
-                                </div>
-                                <div class="project-card-contents">
-                                    <div class="project-card-left">
-                                        <div class="project-card-image"><img src="images/course-data-analyst.jpg"></div>
-                                        <div class="project-card-links">
-                                            <a href="" target="_blank">
-                                                <i class="fa-brands fa-github fa-lg"></i>
-                                            </a>&nbsp;&nbsp;
-                                            <a href="" target="_blank">
-                                                <i class="fa-brands fa-kaggle fa-lg"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="project-card-right">
-                                        <div class="project-card-desc">
-                                            <p>Used machine learning to create a model that predicts which passengers
-                                                survived the Titanic shipwreck.</p>
-                                        </div>
-                                        <ul class="project-card-skills">
-                                            <li>TBD</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <!----- [END OF PROJECT CARD] ---
+                        <!-- [LINKEDIN] -->
+                        <!--
+                        <a href="https://linkedin.com/in/yourusername" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        -->
+                        
+                        <!-- [EMAIL] -->
+                        <!--
+                        <a href="mailto:tbd@example.com">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                        -->
 
-                        </ul>
-                    </li>
-                -->
+                    </div>
 
-                    <!---------- [SMALL PROJECTS STUDIES] ---------->
-                    <li class="small-category">
-                        <div class="title" tabindex="0">Small Projects</div>
-                    </li>
-                    <li class="small">
-                        <ul>
-
-                            <!----- [START OF SMALL PROJECT CARD - Analysing Android and iOS app store data] ----->
-                            <li class="project-card"
-                                onClick="window.open('https://github.com/oxbbar/course-projects/blob/main/analysing-mobile-app-data/analysing-mobile-app-data.ipynb/', '_blank').focus();"
-                                style="cursor: pointer" ;>
-
-                                <div class="small-project-card-top">
-                                    <div class="small-project-card-title">
-                                        <p>Analysing Android and iOS app store data</p>
-                                    </div>
-                                </div>
-
-                                <ul class="small-project-card-skills">
-                                    <li>Python</li>
-                                    <li>pandas</li>
-                                    <li>Jupyter Notebook</li>
-                                    <li>Data Cleaning</li>
-                                    <li>Data Analysis</li>
-                                </ul>
-
-                            </li>
-                            <!----- [END OF PROJECT CARD] ----->
-
-                            <!----- [START OF SMALL PROJECT CARD - Exploring and analysing Hacker News forum categories and hourly traffic data] ----->
-                            <li class="project-card"
-                                onClick="window.open('https://github.com/oxbbar/course-projects/blob/main/exploring-hacker-news-posts/exploring-hacker-news-posts.ipynb', '_blank').focus();"
-                                style="cursor: pointer" ;>
-
-                                <div class="small-project-card-top">
-                                    <div class="small-project-card-title">
-                                        <p>Exploring and analysing Hacker News forum categories and hourly traffic data</p>
-                                    </div>
-                                </div>
-
-                                <ul class="small-project-card-skills">
-                                    <li>Python</li>
-                                    <li>pandas</li>
-                                    <li>Jupyter Notebook</li>
-                                    <li>Data Cleaning</li>
-                                    <li>Data Analysis</li>
-                                </ul>
-                            </li>
-                            <!----- [END OF PROJECT CARD] ----->
-
-                            <!----- [START OF SMALL PROJECT CARD - Analysing Customer Sales and Product Data] ----->
-                            <li class="project-card"
-                                onClick="window.open('https://github.com/oxbbar/course-projects/blob/main/analysing-customer-sales-and-product-data/analysing-customer-sales-and-product-data.ipynb', '_blank').focus();"
-                                style="cursor: pointer" ;>
-
-                                <div class="small-project-card-top">
-                                    <div class="small-project-card-title">
-                                        <p>Analysing customer sales and product data</p>
-                                    </div>
-                                </div>
-
-                                <ul class="small-project-card-skills">
-                                    <li>SQL</li>
-                                    <li>SQLite</li>
-                                    <li>DB Browser for SQLite</li>
-                                    <li>Data Analysis</li>
-                                    <li>Python</li>
-                                    <li>pandas</li>
-                                    <li>Jupyter Notebook</li>
-                                </ul>
-                            </li>
-                            <!----- [END OF PROJECT CARD] ----->
-
-                            <!----- [START OF SMALL PROJECT CARD - Visualizing the Answer to Stock Questions Using Spreadsheet Charts] ----->
-                            <li class="project-card"
-                                onClick="window.open('https://github.com/oxbbar/course-projects/tree/main/visualizing-the-answer-to-stock-questions-using-spreadsheet-charts', '_blank').focus();"
-                                style="cursor: pointer" ;>
-
-                                <div class="small-project-card-top">
-                                    <div class="small-project-card-title">
-                                        <p>Visualising trends in Bitcoin trading data</p>
-                                    </div>
-                                </div>
-
-                                <ul class="small-project-card-skills">
-                                    <li>Excel</li>
-                                    <li>Data Visualisation</li>
-                                </ul>
-                            </li>
-                            <!----- [END OF PROJECT CARD] ----->
-
-                            <!----- [START OF SMALL PROJECT CARD - Identifying Customers Likely to Churn for a Telecommunications Provider] ----->
-                            <li class="project-card"
-                                onClick="window.open('https://github.com/oxbbar/course-projects/tree/main/identifying-customers-likely-to-churn-for-a-telecommunications-provider', '_blank').focus();"
-                                style="cursor: pointer" ;>
-
-                                <div class="small-project-card-top">
-                                    <div class="small-project-card-title">
-                                        <p>Analysing data to identify customer churn trends</p>
-                                    </div>
-                                </div>
-
-                                <ul class="small-project-card-skills">
-                                    <li>Excel</li>
-                                    <li>Data Visualisation</li>
-                                    <li>Statistical Analysis</li>
-                                </ul>
-                            </li>
-                            <!----- [END OF PROJECT CARD] ----->
-
-                        </ul>
-                    </li>
-
-                    <!---------- [DASHBOARDS] ---------->
-                    <li class="dashboard-category">
-                        <div class="title" tabindex="0">Dashboards</div>
-                    </li>
-                    <li class="dashboard">
-                        <ul>
-
-                            <!----- [PROJECT CARD - Modelling Store Sales Data in PowerBI] ----->
-                            <li class="project-card"
-                                onClick="window.open('https://github.com/oxbbar/course-projects/tree/main/modelling-store-sales-data-in-powerbi/', '_blank').focus();"
-                                style="cursor: pointer" ;>
-
-                                <div class="project-card-top">
-                                    <div class="project-card-title">
-                                        <p>Modelling and Visualising Superstore Sales Data</p>
-                                    </div>
-                                </div>
-
-                                <div class="project-card-mid">
-
-                                    <div class="project-card-image">
-                                        <a href="images/modelling-store-sales-data-in-powerbi-1.jpg" target="_blank">
-                                            <img src="images/modelling-store-sales-data-in-powerbi-1.jpg">
-                                        </a>
-                                    </div>
-
-                                    <div class="project-card-desc">
-                                        <p>
-                                            Visualised sales data using Power BI to determine the biggest global markets
-                                            and profit summaries for a range of office supplies.
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <ul class="project-card-skills">
-                                    <li>Data Visualisation</li>
-                                    <li>Power BI</li>
-                                    <li>DAX Functions</li>
-                                </ul>
-
-
-                            </li>
-                            <!----- [END OF PROJECT CARD] ----->
-
-                            <!----- [PROJECT CARD - Visualising Life Expectancy and GDP Variation Over Time] ----->
-                            <li class="project-card"
-                                onClick="window.open('https://github.com/oxbbar/course-projects/tree/main/visualisation-of-life-expectancy-and-gdp-variation-over-time/', '_blank').focus();"
-                                style="cursor: pointer" ;>
-
-                                <div class="project-card-top">
-                                    <div class="project-card-title">
-                                        <p>Visualising Life Expectancy and GDP Variation Over Time</p>
-                                    </div>
-                                </div>
-
-                                <div class="project-card-mid">
-
-                                    <div class="project-card-image">
-                                        <a href="images/visualisation-of-life-expectancy-and-gdp-variation-over-time-1.jpg"
-                                            target="_blank">
-                                            <img
-                                                src="images/visualisation-of-life-expectancy-and-gdp-variation-over-time-1.jpg">
-                                        </a>
-                                    </div>
-
-                                    <div class="project-card-desc">
-                                        <p>
-                                            Visualised life expectancy, population and GDP per capita between regions,
-                                            countries and income classes from 1800 to 2010 to determine trends.
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <ul class="project-card-skills">
-                                    <li>Data Visualisation</li>
-                                    <li>Power BI</li>
-                                </ul>
-
-
-                            </li>
-                            <!----- [END OF PROJECT CARD] ----->
-
-                        </ul>
-                    </li>
-
-                    <!---------- [PERSONAL] ---------->
-                    <li class="personal-category">
-                        <div class="title" tabindex="0">Personal</div>
-                    </li>
-                    <li class="personal">
-                        <ul>
-
-
-                            <!----- [PROJECT CARD - SHOPPING LIST GENERATOR] ----->
-                            <li class="project-card"
-                                onClick="window.open('https://github.com/oxbbar/excel-shopping-list-generator/', '_blank').focus();"
-                                style="cursor: pointer" ;>
-
-                                <div class="project-card-top">
-                                    <div class="project-card-title">
-                                        <p>Shopping List Generator</p>
-                                    </div>
-                                </div>
-
-                                <div class="project-card-mid">
-
-                                    <div class="project-card-image">
-                                        <a href="images/project-grocery-list.jpg" target="_blank">
-                                            <img src="images/project-grocery-list.jpg">
-                                        </a>
-                                    </div>
-
-                                    <div class="project-card-desc">
-                                        <p>
-                                            A spreadsheet to choose pre-defined meals for the week
-                                            and generate your shopping list. Great for reducing
-                                            your trips to the supermarket, reducing your cost for
-                                            groceries and eating healthier!
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <ul class="project-card-skills">
-                                    <li>Excel</li>
-                                    <li>Google Sheets</li>
-                                </ul>
-
-
-                            </li>
-                            <!----- [END OF PROJECT CARD] ----->
-
-                            <!----- [PROJECT CARD - SIMPLE ONE YEAR BUDGET] ----->
-                            <li class="project-card"
-                                onClick="window.open('https://github.com/oxbbar/excel-first-basic-budget/', '_blank').focus();"
-                                style="cursor: pointer" ;>
-
-                                <div class="project-card-top">
-                                    <div class="project-card-title">
-                                        <p>Simple One Year Budget</p>
-                                    </div>
-                                </div>
-
-                                <div class="project-card-mid">
-
-                                    <div class="project-card-image">
-                                        <a href="images/project-yearly-budget.jpg" target="_blank">
-                                            <img src="images/project-yearly-budget.jpg">
-                                        </a>
-                                    </div>
-
-                                    <div class="project-card-desc">
-                                        <p>
-                                            A simple budget sheet for those wanting to track and
-                                            plan their spending for one year. Choose custom
-                                            categories within five pre-defined groups, determine
-                                            monthly budget and input transactions. The spreadsheet
-                                            does the rest! Suitable for those starting with
-                                            budgets.
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <ul class="project-card-skills">
-                                    <li>Excel</li>
-                                    <li>Data Visualisation</li>
-                                </ul>
-
-
-                            </li>
-                            <!----- [END OF PROJECT CARD] ----->
-
-                        </ul>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="education" id="education">
-                <div class="section-header">
-                    <p>Education</p>
                 </div>
-                <div class="section-desc">
-                    <p>
-                        Clicking on a course will open a new window and take you to its GitHub page.
-                    </p>
-                </div>
-                <ul class="education-courses">
+                
+            </aside>       
+            
+            <!-- [MAIN CONTENT]-->
+            <main class="main-content">
+                <section id="about" class="about-section">
+                    <h2 class="section-title">About Me</h2>
+                    
+                    <!-- [INTRODUCTION] -->
+                    <div class="about-content">
+                        
+                        <!-- MARK: ABOUT ME -->
+                        <div class="about-text">
 
-                    <!----- [START] ----- [Master of Data Science] ----->
-                    <li class="education-card">
-
-                        <div class="education-card-title">
-                            <p>
-                                Master of Data Science --- University of Newcastle
+                            <p> I'm an educational professional expanding my skills in data science and analytics - particularly <b>python</b>, <b>SQL</b>, <b>machine learning</b> and <b>visualisation models</b>.
+                                I've worked on a variety of projects ranging from support vector machines and predictive modeling, to web scraping and automation.
+                                I'm constantly learning and exploring new technologies to stay at the forefront of this rapidly evolving field.</p>
+                            <br>
+                            <p> When I'm not in front of a PC, I love exploring new film and TV, traveling, cooking, playing tennis and hiking. 
+                                I also love tinkering with Unity projects and developing scripts to fulfil niche interests.</p>
+                            <br>
+                            <p> You can find me on
+                                <b><a href="https://github.com/oxbbar/" target="_blank">GitHub</a></b>
+                                and
+                                <b><a href="https://www.kaggle.com/oxbbar" target="_blank">Kaggle</a></b>.
                             </p>
+                                                        
+                            <!-- MARK: GENERAL SKILLS -->
+                            <div class="skills">
+
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">R</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">Data Visualisation</span>
+                                <span class="skill-tag">scikit-learn</span>
+                                <span class="skill-tag">Pandas</span>
+                                <span class="skill-tag">NumPy</span>
+                                <span class="skill-tag">Jupyter Notebook</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- MARK: PORTFOLIO -->
+
+                <section id="portfolio" class="portfolio-section">
+                    <h2 class="section-title">Portfolio</h2>
+                    
+                    <div class="filter-container">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="case-study">Case Studies</button>
+                        <button class="filter-btn" data-filter="small-project">Small Projects</button>
+                        <button class="filter-btn" data-filter="competition">Competitions</button>
+                        <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+                        <button class="filter-btn" data-filter="dashboard">Dashboards</button>
+                        <button class="filter-btn" data-filter="personal">Personal</button>
+                        
+                    </div>
+                    
+                    <div class="portfolio-grid">
+                        
+                        <!-- [PROJECT - "Health Benchmark Gap Analysis: Leveraging Fitbit Data for Bellabeat's Marketing Strategy"] -->
+                        <div class="portfolio-item" data-category="case-study">
+
+                            <div class="portfolio-img">
+                                <img src="images/project-bellabeat.jpg" alt="Project 7">
+                            </div>
+
+                            <div class="portfolio-content">
+                                <h3>
+                                    Health Benchmark Gap Analysis: Leveraging Fitbit Data for Bellabeat's Marketing Strategy
+                                </h3>
+                                <p> 
+                                    Analysed Fitbit user data to identify health behavior gaps against CDC and WHO recommendations. 
+                                    Found most users fall short of daily step, active minutes, and sleep targets. 
+                                    Recommended product features and marketing strategies for Bellabeat to address these gaps through notifications, social engagement, and targeted advertising focused on health benchmarks.
+                                </p>
+                                
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">R</span>
+                                    <span class="portfolio-tag">RStudio</span>
+                                    <span class="portfolio-tag">Tableau</span>
+                                    <span class="portfolio-tag">Health Analytics</span>
+                                    <span class="portfolio-tag">Data Visualisation</span>
+                                </div>
+
+                                <a href="https://github.com/oxbbar/course-projects/tree/main/google-data-analytics-bellabeat-case-study/" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+
+                            </div>  
+                        </div>
+                        
+                        <!-- [PROJECT - "Market Gap Analysis: Identifying Profitable Mobile App Opportunities"]-->
+                        <div class="portfolio-item" data-category="small-project">
+
+                            <div class="portfolio-img">
+                                <img src="images/analysing-android-and-ios-app-store-data.jpg" alt="Project 6">
+                            </div>
+
+                            <div class="portfolio-content">
+                                <h3>
+                                    Market Gap Analysis: Identifying Profitable Mobile App Opportunities
+                                </h3>
+                                <p> 
+                                    Conducted comparative analysis of 17,000+ mobile apps across Google Play and App Store to identify underserved market segments. 
+                                    Discovered potential opportunity in iOS personalisation apps, an untapped category with high engagement on Android platforms. 
+                                    Provided strategic recommendations for app development to maximise user acquisition.
+                                </p>
+                                
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">Python</span>
+                                    <span class="portfolio-tag">Data Cleaning</span>
+                                    <span class="portfolio-tag">Market Analysis</span>
+                                    <span class="portfolio-tag">Pandas</span>
+                                    <span class="portfolio-tag">Jupyter Notebook</span>
+                                </div>
+
+                                <a href="https://github.com/oxbbar/course-projects/blob/main/analysing-mobile-app-data/analysing-mobile-app-data.ipynb" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+
+                            </div>  
+                        </div>
+                        
+                        <!-- [PROJECT - "Optimising Engagement: Time Analysis of Hacker News Post Performance"]-->
+                        <div class="portfolio-item" data-category="small-project">
+
+                            <div class="portfolio-img">
+                                <img src="images/exploring-and-analysing-hacker-news-forum-categories-and-hourly-traffic-data.jpg" alt="Project 5">
+                            </div>
+
+                            <div class="portfolio-content">
+                                <h3>
+                                    Optimising Engagement: Time Analysis of Hacker News Post Performance
+                                </h3>
+                                <p> Analysed Hacker News posts to determine optimal engagement strategies. 
+                                    Found 'Ask HN' posts receive twice as many comments as 'Show HN' posts, with peak engagement at 3PM for questions and 12PM for showcases. 
+                                    Insights help content creators maximise community interaction.
+                                </p>
+                                
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">Python</span>
+                                    <span class="portfolio-tag">Pandas</span>
+                                    <span class="portfolio-tag">Community Engagement Analytics</span>
+                                    <span class="portfolio-tag">Jupyter Notebook</span>
+                                </div>
+
+                                <a href="https://github.com/oxbbar/course-projects/blob/main/exploring-hacker-news-posts/exploring-hacker-news-posts.ipynb" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+
+                            </div>  
+                        </div>
+                        
+                        <!-- [PROJECT - "Bitcoin Market Dynamics: Visual Analysis of Price Volatility and Trading Patterns"]-->
+                        <div class="portfolio-item" data-category="small-project">
+
+                            <div class="portfolio-img">
+                                <img src="images/visualising-trends-in-bitcoin-trading-data.jpg" alt="Project 4">
+                            </div>
+
+                            <div class="portfolio-content">
+                                <h3>
+                                    Bitcoin Market Dynamics: Visual Analysis of Price Volatility and Trading Patterns
+                                </h3>
+                                <p> Analysed three years of Bitcoin trading data to uncover price movement patterns and trading behavior. 
+                                    Discovered that Bitcoin is slightly more likely to increase in value day-to-day, with significant price volatility correlating to higher trading volumes. 
+                                    Identified a dramatic price surge period from November 2020 to April 2021, with no consistent seasonal trading patterns.
+                                </p>
+                                
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">Excel</span>
+                                    <span class="portfolio-tag">Financial Analysis</span>
+                                    <span class="portfolio-tag">Statistical Correlation</span>
+                                    <span class="portfolio-tag">Data Visualisation</span>
+                                </div>
+
+                                <a href="https://github.com/oxbbar/course-projects/tree/main/visualizing-the-answer-to-stock-questions-using-spreadsheet-charts/" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+
+                            </div>  
+                        </div>
+                        
+                        <!-- [PROJECT - "Telecom Churn Prediction: Identifying Key Customer Retention Factors"]-->
+                        <div class="portfolio-item" data-category="small-project">
+
+                            <div class="portfolio-img">
+                                <img src="images/identifying-customers-likely-to-churn-for-a-telecommunications-provider.jpg" alt="Project 3">
+                            </div>
+
+                            <div class="portfolio-content">
+                                <h3>
+                                    Telecom Churn Prediction: Identifying Key Customer Retention Factors
+                                </h3>
+                                <p> 
+                                    Analysed telecom customer data to identify churn risk indicators using statistical methods. 
+                                    Discovered significant relationships between churn and high day charges, lack of voicemail plans, and increased customer service calls. 
+                                    Found customers in NJ, MN, TX, MD, and WV had higher churn rates. 
+                                    Results enable targeted retention strategies for high-risk customer segments.
+                                </p>
+                                
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">Excel</span>
+                                    <span class="portfolio-tag">Statistical Testing</span>
+                                    <span class="portfolio-tag">Churn Analysis</span>
+                                    <span class="portfolio-tag">Customer Segmentation</span>
+                                    <span class="portfolio-tag">Predictive Indicators</span>
+                                    <span class="portfolio-tag">Data Visualisation</span>
+                                </div>
+
+                                <a href="https://github.com/oxbbar/course-projects/tree/main/identifying-customers-likely-to-churn-for-a-telecommunications-provider/" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+
+                            </div>  
                         </div>
 
-                        <div class="education-card-desc">
-                            <p>
-                                Statistical trial design, logistic regression, ANCOVA, and statistical analysis. Model evaluation and systematic review. Data security, management, privacy, ethics, and conduct.
-                                SAS, RDBM and Excel.  
-                            </p>
+                        <!-- [PROJECT - "Global Retail Performance: Interactive Dashboard of Superstore Sales Metrics"] ----->
+                        <div class="portfolio-item" data-category="dashboard">
+
+                            <div class="portfolio-img">
+                                <img src="images/modelling-store-sales-data-in-powerbi.jpg" alt="Project 2">
+                            </div>
+                            
+                            <div class="portfolio-content">
+                                <h3>
+                                    Global Retail Performance: Interactive Dashboard of Superstore Sales Metrics
+                                </h3>
+                                <p> 
+                                    Created an interactive Power BI dashboard to analyse $12.6M in global office supply sales across multiple markets. 
+                                    Identified the US, Australia, and France as top-performing countries, and revealed the Consumer segment as the most profitable ($749K). 
+                                    Dashboard enables year-by-year comparison and segment-based profit analysis.
+                                </p>
+                                
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">PowerBI</span>
+                                    <span class="portfolio-tag">DAX Functions</span>
+                                    <span class="portfolio-tag">Data Modeling</span>
+                                    <span class="portfolio-tag">Financial Analytics</span>
+                                    <span class="portfolio-tag">Interactive Dashboards</span>
+                                    <span class="portfolio-tag">Sales Performance Metrics</span>
+                                    <span class="portfolio-tag">Global Market Analysis</span>
+                                    <span class="portfolio-tag">Trend Visualisation</span>
+                                </div>
+
+                                <a href="https://github.com/oxbbar/course-projects/tree/main/modelling-store-sales-data-in-powerbi/" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+
+                            </div>
                         </div>
+                        
+                        <!-- [PROJECT - "Global Development Patterns: 200 Years of Life Expectancy and Economic Growth"]-->
+                        <div class="portfolio-item" data-category="dashboard">
 
-                        <ul class="education-card-skills">
-                            <li>Logistic Regression</li>
-                            <li>Statistical Analysis</li>
-                            <li>Clinical Trial Design</li>
-                            <li>Model Evaluation</li>
-                            <li>SAS</li>
-                            <li>ANCOVA</li>
-                            <li>Systematic Review</li>
-                            <li>Relational Database Management</li>
-                            <li>Data Security</li>
-                            <li>Data Quality Management</li>
-                            <li>Intellectual Property</li>
-                            <li>Data Privacy</li>
-                            <li>Data Ethics and Conduct</li>
-                        </ul>
+                            <div class="portfolio-img">
+                                <img src="images/visualisation-of-life-expectancy-and-gdp-variation-over-time.jpg" alt="Project 1">
+                            </div>
 
-                    </li>
-                    <!----- [ END ] ----- [Master of Data Science] ----->
+                            <div class="portfolio-content">
+                                <h3>
+                                    Global Development Patterns: 200 Years of Life Expectancy and Economic Growth
+                                </h3>
+                                <p> 
+                                    Created interactive visualistions tracking the relationship between life expectancy, GDP, and population across 200+ years of global data. 
+                                    Revealed distinct development patterns between regions and income classes, highlighting how economic growth correlates with health outcomes. 
+                                    Dashboard enables cross-country comparisons and identifies historical turning points in global development.
+                                </p>
+                                
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">PowerBI</span>
+                                    <span class="portfolio-tag">Data Visualisation</span>
+                                    <span class="portfolio-tag">Historical Trend Analysis</span>
+                                    <span class="portfolio-tag">Economic Indicators</span>
+                                    <span class="portfolio-tag">Global Health Metrics</span>
+                                </div>
 
-                    <!----- [START] ----- [Graduate Certificate in Data Analytics] ----->
-                    <li class="education-card">
+                                <a href="https://github.com/oxbbar/course-projects/tree/main/visualisation-of-life-expectancy-and-gdp-variation-over-time/" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
 
-                        <div class="education-card-title">
-                            <p>
-                                Graduate Certificate in Data Analytics --- University of
-                                Newcastle
-                            </p>
-                        </div>
-
-                        <div class="education-card-desc">
-                            <p>
-                                Total Quality Management. Systems thinking. Statistical process control, surveys and
-                                experimental design.
-                                Regression and ANOVA. Data modelling and visualisation. Data reporting. Data security,
-                                privacy and ethics. Excel and JMP.
-                            </p>
-                        </div>
-
-                        <ul class="education-card-skills">
-                            <li>TQM</li>
-                            <li>Systems Thinking</li>
-                            <li>SPC</li>
-                            <li>Experimental Design</li>
-                            <li>Data Collection</li>
-                            <li>Data Modelling</li>
-                            <li>Data Visualisation</li>
-                            <li>Presenting</li>
-                            <li>Reporting</li>
-                            <li>Data Ethics</li>
-                            <li>Excel</li>
-                            <li>JMP</li>
-                        </ul>
-
-                    </li>
-                    <!----- [ END ] ----- [Graduate Certificate in Data Analytics] ----->
-
-                    <!----- [START] ----- [Data Scientist in Python - Career Path] ----->
-                    <li class="education-card link"
-                        onClick="window.open('https://github.com/oxbbar/course-data-scientist/', '_blank').focus();"
-                        style="cursor: pointer" ;>
-
-                        <div class="education-card-title">
-                            <p>Data Scientist in Python - Career Path --- Dataquest</p>
-                        </div>
-
-                        <div class="education-card-desc">
-                            <p>
-                                Object-oriented and functional programming with Python. 
-                                Web scraping and SQL queries. 
-                                Deep learning and machine learning. 
-                                Predictive analysis.
-                            </p>
-                        </div>
-
-                        <ul class="education-card-skills">
-                            <li>Python</li>
-                            <li>pandas</li>
-                            <li>NumPy</li>
-                            <li>Matplotlib</li>
-                            <li>scikit-learn</li>
-                            <li>SQL</li>
-                            <li>Web Scraping</li>
-                            <li>Machine Learning</li>
-                            <li>Predictive Analysis</li>
-                            <li>Data Cleaning</li>
-                            <li>Data Analysis</li>
-                            <li>Data Visualisation</li>
-                        </ul>
-
-                    </li>
-                    <!----- [ END ] ----- [Data Scientist in Python - Career Path] ----->
-
-                    <!----- [START] ----- [Business Analyst with Power BI - Career Path] ----->
-                    <li class="education-card link"
-                        onClick="window.open('https://github.com/oxbbar/course-business-analyst-with-power-bi/', '_blank').focus();"
-                        style="cursor: pointer" ;>
-
-                        <div class="education-card-title">
-                            <p>Business Analyst with Power BI - Career Path --- Dataquest</p>
-                        </div>
-
-                        <div class="education-card-desc">
-                            <p>
-                                Data Analysis in Excel. Extracting and manipulating data using SQL.
-                                Descriptive statistical analysis.
-                                Dashboards and visualisations in Power BI.
-                            </p>
-                        </div>
-
-                        <ul class="education-card-skills">
-                            <li>Excel</li>
-                            <li>SQL</li>
-                            <li>Power BI</li>
-                            <li>Dashboards</li>
-                            <li>Data Cleaning</li>
-                            <li>Data Analysis</li>
-                            <li>Data Visualisation</li>
-                        </ul>
-
-                    </li>
-                    <!----- [ END ] ----- [Business Analyst with Power BI - Career Path] ----->
-
-                    <!----- [START] ----- [Data Analyst in Python - Career Path] ----->
-                    <li class="education-card link"
-                        onClick="window.open('https://github.com/oxbbar/course-data-analyst-in-python/', '_blank').focus();"
-                        style="cursor: pointer" ;>
-
-                        <div class="education-card-title">
-                            <p>Data Analyst in Python - Career Path --- Dataquest</p>
-                        </div>
-
-                        <div class="education-card-desc">
-                            <p>
-                                Python fundamentals. Preparing and extracting data with SQL
-                                queries. Data visualisation. Descriptive and predictive
-                                statistics.
-                            </p>
-                        </div>
-
-                        <ul class="education-card-skills">
-                            <li>Python</li>
-                            <li>Jupyter Notebook</li>
-                            <li>pandas</li>
-                            <li>NumPy</li>
-                            <li>Data Cleaning</li>
-                            <li>Data Analysis</li>
-                            <li>Data Visualisation</li>
-                            <li>SQL</li>
-                            <li>APIs and Web Scraping</li>
-                            <li>Statistics</li>
-                            <li>Conditional Probability</li>
-                            <li>Git</li>
-                        </ul>
-
-                    </li>
-                    <!----- [ END ] ----- [Data Analyst in Python - Career Path] ----->
-
-                    <!----- [START] ----- [Google Data Analytics - Professional Certificate] ----->
-                    <li class="education-card link"
-                        onClick="window.open('https://github.com/oxbbar/course-google-data-analytics/', '_blank').focus();"
-                        style="cursor: pointer" ;>
-
-                        <div class="education-card-title">
-                            <p>
-                                Google Data Analytics - Professional Certificate --- Coursera
-                            </p>
+                            </div>
+                            
                         </div>
 
 
-                        <div class="education-card-desc">
-                            <p>
-                                Collecting, cleaning, processing and analysing data. SQL queries. R programming.
-                                Creating
-                                data visualisations in Tableau. Presenting and reporting insight.
-                            </p>
+                    </div>
+                </section>
+                
+
+                <!-- MARK: EDUCATION -->
+                <section id="education" class="education-section">
+                    <h2 class="section-title">Education</h2>
+                    
+                    <div class="education-timeline">
+
+                        <!-- [EDUCATION - "Master of Data Science"]-->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-year">2024 - Present</span>
+                                <h3>Master of Data Science</h3>
+                                <h4>University of Newcastle</h4>
+                                <p> Statistical trial design, logistic regression, ANCOVA, and statistical analysis. 
+                                    Model evaluation and systematic review. 
+                                    Data security, management, privacy, ethics, and conduct.
+                                    SAS, RDBM and Excel.
+                                </p>
+
+                                <div class="education-tags">
+                                    <span class="education-tag">Logistic Regression</span>
+                                    <span class="education-tag">Statistical Analysis</span>
+                                    <span class="education-tag">Clinical Trial Design</span>
+                                    <span class="education-tag">Machine Learning</span>
+                                    <span class="education-tag">Model Evaluation</span>
+                                    <span class="education-tag">SAS</span>
+                                    <span class="education-tag">Systematic Review</span>
+                                    <span class="education-tag">Relational Database Management</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <!-- [EDUCATION - "Graduate Certificate in Data Analytics"]-->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-year">2022 - 2023</span>
+                                <h3>Graduate Certificate in Data Analytics</h3>
+                                <h4>University of Newcastle</h4>
+                                <p> Total Quality Management. 
+                                    Systems thinking. 
+                                    Statistical process control, surveys and experimental design. 
+                                    Regression and ANOVA. 
+                                    Data modelling and visualisation. 
+                                    Data reporting. 
+                                    Data security, privacy and ethics. 
+                                    Excel and JMP.
+                                </p>
+
+                                <div class="education-tags">
+                                    <span class="education-tag">TQM</span>
+                                    <span class="education-tag">Systems Thinking</span>
+                                    <span class="education-tag">SPC</span>
+                                    <span class="education-tag">Excel</span>
+                                    <span class="education-tag">JMP</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <!-- [EDUCATION - "Data Scientist in Python - Career Path"]-->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-year">2022 - Present</span>
+                                <h3>Data Scientist in Python - Career Path</h3>
+                                <h4>Dataquest</h4>
+                                <p>
+                                    Object-oriented and functional programming with Python. 
+                                    Web scraping and SQL queries. 
+                                    Deep learning and machine learning. 
+                                    Predictive analysis.
+                                </p>
+
+                                <div class="education-tags">
+                                    <span class="education-tag">Python</span>
+                                    <span class="education-tag">Pandas</span>
+                                    <span class="education-tag">NumPy</span>
+                                    <span class="education-tag">Matplotlib</span>
+                                    <span class="education-tag">scikit-learn</span>
+                                    <span class="education-tag">SQL</span>
+                                    <span class="education-tag">Web Scraping</span>
+                                    <span class="education-tag">Machine Learning</span>
+                                    <span class="education-tag">Predictive Analysis</span>
+                                </div>
+
+                                <a href="https://github.com/oxbbar/course-data-scientist/" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+
+                            </div>
                         </div>
 
-                        <ul class="education-card-skills">
-                            <li>Data Collection</li>
-                            <li>Data Cleaning</li>
-                            <li>Data Analysis</li>
-                            <li>Data Visualisation</li>
-                            <li>SQL</li>
-                            <li>R</li>
-                            <li>Tableau</li>
-                            <li>Sampling</li>
-                            <li>Excel</li>
-                            <li>Google Sheets</li>
-                        </ul>
+                        <!-- [EDUCATION - "Business Analyst with Power BI - Career Path"]-->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-year">2022 - Present</span>
+                                <h3>Business Analyst with Power BI - Career Path</h3>
+                                <h4>Dataquest</h4>
+                                <p>
+                                    Data Analysis in Excel. 
+                                    Extracting and manipulating data using SQL.
+                                    Descriptive statistical analysis.
+                                    Dashboards and visualisations in Power BI.
+                                </p>
 
-                    </li>
-                    <!----- [ END ] ----- [Google Data Analytics - Professional Certificate] ----->
+                                <div class="education-tags">
+                                    <span class="education-tag">Excel</span>
+                                    <span class="education-tag">SQL</span>
+                                    <span class="education-tag">PowerBI</span>
+                                </div>
 
-                    <!----- [START] ----- [Graduate Diploma of Education] ----->
-                    <li class="education-card">
+                                <a href="https://github.com/oxbbar/course-business-analyst-with-power-bi/" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
 
-                        <div class="education-card-title">
-                            <p>
-                                Graduate Diploma of Education --- Macquarie University
-                            </p>
+                            </div>
                         </div>
 
-                        <div class="education-card-desc">
-                            <p>
-                                Presentations and reporting. Curriculum design. Inclusive
-                                education. Management and collaboration
-                            </p>
+                        <!-- [EDUCATION - "Data Analyst in Python - Career Path"]-->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-year">2022 - Present</span>
+                                <h3>Data Analyst in Python - Career Path</h3>
+                                <h4>Dataquest</h4>
+                                <p>
+                                    Python fundamentals. 
+                                    Preparing and extracting data with SQL queries. 
+                                    Data visualisation. 
+                                    Descriptive and predictive statistics.
+                                </p>
+
+                                <div class="education-tags">
+                                    <span class="education-tag">Python</span>
+                                    <span class="education-tag">Pandas</span>
+                                    <span class="education-tag">NumPy</span>
+                                    <span class="education-tag">Jupyter Notebook</span>
+                                    <span class="education-tag">SQL</span>
+                                    <span class="education-tag">APIs and Web Scraping</span>
+                                    <span class="education-tag">Conditional Probability</span>
+                                    <span class="education-tag">Git</span>
+                                </div>
+
+                                <a href="https://github.com/oxbbar/course-data-analyst-in-python/" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+
+                            </div>
                         </div>
 
-                        <ul class="education-card-skills">
-                            <li>Presenting</li>
-                            <li>Reporting</li>
-                            <li>Curriculum Design</li>
-                        </ul>
+                        <!-- [EDUCATION - "Google Data Analytics - Professional Certificate"]-->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-year">2022</span>
+                                <h3>Google Data Analytics - Professional Certificate</h3>
+                                <h4>Coursera</h4>
+                                <p>
+                                    Collecting, cleaning, processing and analysing data. 
+                                    SQL queries. 
+                                    R programming.
+                                    Creating data visualisations in Tableau. 
+                                    Presenting and reporting insight.                            
+                                </p>
 
-                    </li>
-                    <!----- [ END ] ----- [Graduate Diploma of Education] ----->
+                                <div class="education-tags">
+                                    <span class="education-tag">Excel</span>
+                                    <span class="education-tag">Google Sheets</span>
+                                    <span class="education-tag">Tableau</span>
+                                    <span class="education-tag">SQL</span>
+                                    <span class="education-tag">R and RStudio</span>
+                                </div>
 
-                    <!----- [START] ----- [Bachelor of Science] ----->
-                    <li class="education-card">
+                                <a href="https://github.com/oxbbar/course-google-data-analytics/" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
 
-                        <div class="education-card-title">
-                            <p>Bachelor of Science --- Macquarie University</p>
+                            </div>
                         </div>
 
-                        <div class="education-card-desc">
-                            <p>
-                                Data collection and quality. Statistical models, regression &
-                                correlation. Sampling, hypothesis testing and errors. Excel
-                                and Minitab. Presentation and reporting.
-                            </p>
+                        <!-- [EDUCATION - "Graduate Diploma of Education"]-->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-year">2014</span>
+                                <h3>Graduate Diploma of Education</h3>
+                                <h4>Macquarie University</h4>
+                                <p>
+                                    Presentations and reporting. 
+                                    Curriculum design. 
+                                    Inclusive education. 
+                                    Management and collaboration.
+                                </p>
+
+                                <div class="education-tags">
+                                    <span class="education-tag">Presenting</span>
+                                    <span class="education-tag">Reporting</span>
+                                    <span class="education-tag">Curriculum Design</span>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <ul class="education-card-skills">
-                            <li>Excel</li>
-                            <li>Statistics</li>
-                            <li>Regression</li>
-                            <li>Correlation</li>
-                            <li>Anova</li>
-                            <li>Minitab</li>
-                        </ul>
+                        <!-- [EDUCATION - "Bachelor of Science"]-->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-year">2012</span>
+                                <h3>Bachelor of Science</h3>
+                                <h4>Macquarie University</h4>
+                                <p>
+                                    Data collection and quality. 
+                                    Statistical models, regression & correlation. 
+                                    Sampling, hypothesis testing and errors. 
+                                    Excel and Minitab. 
+                                    Presentation and reporting.
+                                </p>
 
-                    </li>
-                    <!----- [ END ] ----- [Bachelor of Science] ----->
-                </ul>
-            </div>
+                                <div class="education-tags">
+                                    <span class="education-tag">Excel</span>
+                                    <span class="education-tag">Regression</span>
+                                    <span class="education-tag">Correlation</span>
+                                    <span class="education-tag">ANOVA</span>
+                                    <span class="education-tag">Minitab</span>
+                                </div>
 
-            <!-- <div class="contact" id="contact">
-                <div class="section-header">
-                    <p>Contact</p>
-                </div>
-                <div class="section-desc">
-                    <p></p>
-                </div>
-            </div> -->
+                            </div>
+                        </div>
 
+
+
+
+                    </div>
+                </section>
+                
+                <!-- MARK: CONTACT -->
+                <section id="contact" class="contact-section">
+                    <h2 class="section-title">Contact Me</h2>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. 
+                        Feel free to reach out directly via email.</p>
+                    <br>
+                    <p>Email: <a href="mailto:oxbbar@gmail.com">oxbbar@gmail.com</a></p>
+                </section>
+            </main>
         </div>
-        <!---------- [ END } ----- [CONTENTS} ---------->
+        
+        <!-- 
+        <footer>
+            <p>&copy; 2025 Oxbbar | Data Scientist</p>
+        </footer>
+        -->
 
     </div>
-
+    
     <script src="js/script.js"></script>
 </body>
 
