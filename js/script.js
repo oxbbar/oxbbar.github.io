@@ -47,19 +47,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add active class to nav links based on scroll position
     const sections = document.querySelectorAll('section');
+    console.log("Sections found:", sections.length);
     const navLinks = document.querySelectorAll('.nav-links a, .top-nav-links a');
+    console.log("Nav links found:", navLinks.length);
     
     function highlightNavLink() {
         const scrollPosition = window.scrollY;
-        const topNavHeight = document.querySelector('.top-nav').offsetHeight || 0;
+        const topNav = document.querySelector('.top-nav');
+        const topNavHeight = topNav ? topNav.offsetHeight : 0;
         
         sections.forEach(section => {
+            if (!section) return; // Skip if section is null
+            
             const sectionTop = section.offsetTop - topNavHeight - 100;
             const sectionBottom = sectionTop + section.offsetHeight;
             const sectionId = section.getAttribute('id');
             
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                 navLinks.forEach(link => {
+                    if (!link) return; // Skip if link is null
+                    
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${sectionId}`) {
                         link.classList.add('active');
